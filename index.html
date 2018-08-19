@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Crystal Collector</title>
+  <!-- Link to jQuery Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Link to Bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <!--Link to Font Awesome-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+</head>
+
+<body>
+    <h1><i class="far fa-gem"></i> Crystal Collector <i class="far fa-gem"></i></h1>
+    <h2>A Blingy Math Game</h2>
+
+    <div>
+        <p>
+            <b>Instructions:</b>
+            <br>
+            A random number ("Target Value") wil appear at the start of the game.
+        </p>
+        <p>
+            Click on the four crystals below to add a specific point value to your 
+            score. Each crystal's value is hidden from you until you click it.
+        </p>
+        <p>
+            Win the game by matching your total score to the randomly selected target 
+            value. If the total score exceeds the target value, you lose! 
+            <i class="far fa-sad-cry"></i>
+        </p>
+        <p>
+            The value of each crystal changes each time a new game starts.
+        </p>
+    </div>
+
+    <div>
+        <p>Target Value: <span id="target-value"></span></p>
+    </div>
+
+    <div>
+        <p>Wins: <span id="your-wins">0</span></p>
+        <p>Losses: <span id="your-losses">0</span></p>
+    </div>
+
+    <div>
+        <button class="btn btn-dark btn-lg crystal-1">
+            <i class="far fa-gem"></i></button>
+        <button class="btn btn-light btn-lg crystal-2">
+            <i class="far fa-gem"></i></button>
+        <button class="btn btn-dark btn-lg crystal-3">
+            <i class="far fa-gem"></i></button>
+        <button class="btn btn-light btn-lg crystal-4">
+            <i class="far fa-gem"></i></button>
+    </div>
+
+    <div>
+        <p>Total Score: <span id="total-score">0</span></p>
+    </div>
+
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+body {
+    background: url("../images/background-krystal-ng-unsplash.jpg");
+    height: 100%;
+    background-color: paleturquoise;
+ }
+
+.crystal-1 {
+    background-color: turquoise;
+    border-width: 0;
+}
+
+.crystal-2 {
+    background-color: pink;
+    border-width: 0;
+}
+
+.crystal-3 {
+    background-color: paleturquoise;
+    border-width: 0;
+}
+
+.crystal-4 {
+    background-color: plum;
+    border-width: 0;
+}

@@ -3,6 +3,7 @@ var randomValue = 0;
 var yourWins = 0;
 var yourLosses = 0;
 var yourScore = 0;
+var crystals = $(".crystalButton");
 
 $(document).ready(function() {
 
@@ -35,25 +36,29 @@ function setUpGame() {
 
 
     // Assign these 4 numbers to respective crystal buttons
-    $('#crystalButton1').attr("value", crystalValues[0]);
+    $("#crystal1").attr("value", crystalValues[0]);
         console.log("Crystal 1 value - test", crystalValues[0]);
 
-    $('#crystalButton2').attr("value", crystalValues[1]);
+    $("#crystal2").attr("value", crystalValues[1]);
         console.log("Crystal 2 value - test", crystalValues[1]);
 
-    $('#crystalButton3').attr("value", crystalValues[2]);
+    $("#crystal3").attr("value", crystalValues[2]);
         console.log("Crystal 3 value - test", crystalValues[2]);
 
-    $('#crystalButton4').attr("value", crystalValues[3]);
+    $("#crystal4").attr("value", crystalValues[3]);
         console.log("Crystal 4 value - test", crystalValues[3]);
 
 }
 setUpGame();
 
-// Game play begins when user clicks their first crystal button
+// Event listener to start game play when user clicks a crystal button
 $(".crystalButton").on("click", playGame);
 
 var playGame = function() {
+
+    //Add value of each clicked crystal to yourScore
+    yourScore = yourScore + (Number($(this).attr("value")));
+    $("#currentScore").text(yourScore);
 
     //Player WINS if yourScore = target-value, wins go up by 1
 

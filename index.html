@@ -5,12 +5,9 @@
   <title>Crystal Collector</title>
   <!--CSS Reset-->
   <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-  <!-- Link to jQuery Library and game JS file -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="assets/javascript/game.js"></script>
-  <!-- Link to Bootstrap-->
+  <!-- Bootstrap-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <!--Link to Font Awesome-->
+  <!--Font Awesome-->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
   <!--Custom CSS-->
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
@@ -52,19 +49,23 @@
     </div>
 
     <div>
-        <button class="btn btn-light btn-lg crystalButton" id="crystalButton1">
+        <button class="btn btn-light btn-lg crystalButton" id="crystal1">
             <i class="far fa-gem"></i></button>
-        <button class="btn btn-light btn-lg crystalButton" id="crystalButton2">
+        <button class="btn btn-light btn-lg crystalButton" id="crystal2">
             <i class="far fa-gem"></i></button>
-        <button class="btn btn-light btn-lg crystalButton" id="crystalButton3">
+        <button class="btn btn-light btn-lg crystalButton" id="crystal3">
             <i class="far fa-gem"></i></button>
-        <button class="btn btn-light btn-lg crystalButton" id="crystalButton4">
+        <button class="btn btn-light btn-lg crystalButton" id="crystal4">
             <i class="far fa-gem"></i></button>
     </div>
 
     <div>
-        <p>Your Score: <span id="yourScore">0</span></p>
+        <p>Your Score: <span id="currentScore">0</span></p>
     </div>
+
+    <!-- Link to jQuery Library, game JS file -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
 
 </body>
 </html>

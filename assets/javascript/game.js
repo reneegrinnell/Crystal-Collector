@@ -16,14 +16,26 @@ function startGame() {
     // Make random value from above the targetValue for this round
     $("#targetValue").text(randomValue);
 
-    //Crystals 1-4 are each randomly assigned a value between 1 and 12
+    // Fill array crystalValues with 4 random numbers between 1 and 12
+    var crystalValues = [];
+    for (var i = 0; i < 4; i++) {
+        crystalValues.push(Math.round(Math.random() * 12))
+        console.log(crystalValues);
+    }
+
+    // Assign these 4 numbers to respective crystal buttons
+    $('#crystal1').attr("value", crystalValues[0]);
+        console.log("Crystal 1 value - test", crystalValues[0]);
+    $('#crystal2').attr("value", crystalValues[1]);
+    $('#crystal3').attr("value", crystalValues[2]);
+    $('#crystal4').attr("value", crystalValues[3]);
 
 }
 
 startGame();
 
 // function playGame() {
-// //When user clicks a crystal, add its randomly assigned 1-12 value to total-score counter
+// //When user clicks a crystal, add its randomly assigned value to total-score counter
 
 // //Player WINS if yourScore = target-value, wins go up by 1
 

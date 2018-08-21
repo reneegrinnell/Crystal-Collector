@@ -4,7 +4,18 @@ var yourWins = 0;
 var yourLosses = 0;
 var yourScore = 0;
 
-$(document).ready(function() {
+$(document).ready(function () {
+    setUpGame();
+
+    // Event listener to start game play when user clicks a crystal button
+    $(".crystalButton").on("click", function () {
+
+        //Add value of each clicked crystal to yourScore
+        yourScore = yourScore + (Number($(this).attr("value")));
+        $("#currentScore").text(yourScore);
+
+    });
+});
 
 // //First run of game when user loads page
 function setUpGame() {
@@ -16,18 +27,10 @@ function setUpGame() {
     // Display the random value from above as the targetValue for this round
     $("#targetValue").text(randomValue);
 
-    // Fill array crystalValues with 4 random numbers between 1 and 12
-    // var crystalValues = [];
-    // for (var i = 0; i < 4; i++) {
-    //     crystalValues.push(Math.round(Math.random() * 12))
-    //     console.log(crystalValues[i]);
-    // }
-
-    //Working on 4 DISTINCT random values (no repeats)...
-
+    // Fill array crystalValues with 4 random, distinct numbers between 1 and 12
     var crystalValues = [];
     while (crystalValues.length < 4) {
-        var randomnumber = Math.floor(Math.random() * 12);
+        var randomnumber = Math.floor(Math.random() * 12) +1;
         if (crystalValues.indexOf(randomnumber) > -1) {
             continue;
         }
@@ -50,16 +53,6 @@ function setUpGame() {
     console.log("Crystal 4 value - test", crystalValues[3]);
 
 }
-setUpGame();
-
-// Event listener to start game play when user clicks a crystal button
-$(".crystalButton").on("click", playGame);
-
-function playGame() {
-
-    //Add value of each clicked crystal to yourScore
-    yourScore = yourScore + (Number($(this).attr("value")));
-    $("#currentScore").text(yourScore);
 
     //Player WINS if yourScore = target-value, wins go up by 1
 
@@ -69,6 +62,5 @@ function playGame() {
          //Total-score resets to 0
          //New random target-value generated, displayed
          //All 4 crystals randomly assigned 4 new hidden values
-}
 
-});
+

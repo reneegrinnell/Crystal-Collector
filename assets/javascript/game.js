@@ -3,7 +3,6 @@ var randomValue = 0;
 var yourWins = 0;
 var yourLosses = 0;
 var yourScore = 0;
-var crystals = $(".crystalButton");
 
 $(document).ready(function() {
 
@@ -54,7 +53,7 @@ setUpGame();
 // Event listener to start game play when user clicks a crystal button
 $(".crystalButton").on("click", playGame);
 
-var playGame = function() {
+function playGame() {
 
     //Add value of each clicked crystal to yourScore
     yourScore = yourScore + (Number($(this).attr("value")));

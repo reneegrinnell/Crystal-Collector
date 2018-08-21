@@ -17,35 +17,37 @@ function setUpGame() {
     $("#targetValue").text(randomValue);
 
     // Fill array crystalValues with 4 random numbers between 1 and 12
-    var crystalValues = [];
-    for (var i = 0; i < 4; i++) {
-        crystalValues.push(Math.round(Math.random() * 12))
-        console.log(crystalValues[i]);
-    }
+    // var crystalValues = [];
+    // for (var i = 0; i < 4; i++) {
+    //     crystalValues.push(Math.round(Math.random() * 12))
+    //     console.log(crystalValues[i]);
+    // }
 
     //Working on 4 DISTINCT random values (no repeats)...
 
-    // var crystalValues = [];
-    // while (crystalValues.length < 4) {
-    //     var randomnumber = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
-    //     if (crystalValues.indexOf(randomnumber) > -1) continue;
-    //     crystalValues[crystalValues.length] = randomnumber;
-    // }
-    // console.log(arr);
+    var crystalValues = [];
+    while (crystalValues.length < 4) {
+        var randomnumber = Math.floor(Math.random() * 12);
+        if (crystalValues.indexOf(randomnumber) > -1) {
+            continue;
+        }
+        crystalValues[crystalValues.length] = randomnumber;
+    }
+    console.log(crystalValues);
 
 
     // Assign these 4 numbers to respective crystal buttons
     $("#crystal1").attr("value", crystalValues[0]);
-        console.log("Crystal 1 value - test", crystalValues[0]);
+    console.log("Crystal 1 value - test", crystalValues[0]);
 
     $("#crystal2").attr("value", crystalValues[1]);
-        console.log("Crystal 2 value - test", crystalValues[1]);
+    console.log("Crystal 2 value - test", crystalValues[1]);
 
     $("#crystal3").attr("value", crystalValues[2]);
-        console.log("Crystal 3 value - test", crystalValues[2]);
+    console.log("Crystal 3 value - test", crystalValues[2]);
 
     $("#crystal4").attr("value", crystalValues[3]);
-        console.log("Crystal 4 value - test", crystalValues[3]);
+    console.log("Crystal 4 value - test", crystalValues[3]);
 
 }
 setUpGame();

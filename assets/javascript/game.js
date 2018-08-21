@@ -38,7 +38,6 @@ function setUpGame() {
     }
     console.log(crystalValues);
 
-
     // Assign these 4 numbers to respective crystal buttons
     $("#crystal1").attr("value", crystalValues[0]);
     console.log("Crystal 1 value - test", crystalValues[0]);

@@ -1,29 +1,47 @@
-.jumbotron {
-    opacity: .6;
-}
-
 body {
     background: url("../images/background-krystal-ng-unsplash.jpg");
     background-size: cover;
-    background-color: palegoldenrod;
+    background-color: paleturquoise;
+    opacity: 1;
  }
 
+.jumbotron {
+    background-color: #ffffff;
+    opacity: .5;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.gameContainer {
+    background-color: #ffffff;
+    opacity: .5;
+    padding: 5px 25px 5px 25px;
+    margin-bottom: 25px;
+    width: 65%;
+    margin-left: 5%;
+    margin-right: 40%;
+}
+
+.buttonsContainer {
+
+}
+
 #crystal1 {
-    background-color: turquoise;
+    background-color: #ff8ea0;
     border-width: 0;
 }
 
 #crystal2 {
-    background-color: pink;
+    background-color: plum;
     border-width: 0;
 }
 
 #crystal3 {
-    background-color: paleturquoise;
+    background-color:#96f2e6;
     border-width: 0;
 }
 
 #crystal4 {
-    background-color: plum;
+    background-color: #b92cb9;
     border-width: 0;
 }

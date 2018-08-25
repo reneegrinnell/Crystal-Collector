@@ -20,39 +20,45 @@
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
             <h1 class="display-4">
-                <i class="far fa-gem"></i>
-                    Crystal Collector 
-                    <i class="far fa-gem"></i>
+                Crystal Collector
             </h1>
-            <p class="lead">A Blingy Math Game</p>
+            <p class="lead">
+                <i class="far fa-gem"></i>
+                A Blingy Math Game
+                <i class="far fa-gem"></i>
+            </p>
         </div>
     </div>
    
-    <div class="container">
-        <p>
-            <h5>How to Play:</h5>
-            At the start of the game, a random number ("Target Value") will appear and
-            each of the four crystal buttons below will be assigned different random
-            values. The value of each crystal is hidden from you until you click it.
-        </p>
-        <p>
-            Win a round by matching your total score to the randomly selected target 
-            value. If the total score exceeds the target value, you lose! 
-            <i class="far fa-sad-cry"></i>
-        </p>
-
+    <div class="gameContainer">
         <div class="row">
-            <div class="col-md-6">
+            <p>
+                <h5>How to Play:</h5>
+                At the start of the game, a random number ("Target Value") will appear and
+                each of the four crystal buttons below will be assigned different random
+                values. The value of each crystal is hidden from you until you click it.
+            </p>
+            <p>
+                Win a round by matching your total score to the randomly selected target 
+                value. If the total score exceeds the target value, you lose! 
+                <i class="far fa-sad-cry"></i>
+            </p>
+        </div>
+   
+        <div class="row">
+            <div class="col-md-5">
                 <h6>Target Value:</h6><span id="targetValue">0</span>
                 <h6>Your Score:</h6><span id="currentScore">0</span>
             </div>
 
-            <div class="col-md=6">
+            <div class="col-md=5">
                 <h6>Wins:</h6><span id="wins">0</span>
                 <h6>Losses:</h6><span id="losses">0</span>
             </div>
         </div>
+    </div>
     
+    <div class="container buttonsContainer">
         <div class="row">
             <div class="col-md-2 col-sm-3 col-xs-3">
                 <button class="btn btn-light btn-lg crystalButton" id="crystal1">
@@ -73,8 +79,7 @@
                 <button class="btn btn-light btn-lg crystalButton" id="crystal4">
                     <i class="far fa-gem"></i></button>
             </div>
-        </div>
-
+        </div>  
     </div>
 
     <!-- Link to jQuery Library, game JS file -->

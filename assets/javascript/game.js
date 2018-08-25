@@ -1,4 +1,4 @@
-//Global variable definitions
+// Global variable definitions
 var randomValue = 0;
 var yourWins = 0;
 var yourLosses = 0;
@@ -10,14 +10,31 @@ $(document).ready(function () {
     // Event listener to start game play when user clicks a crystal button
     $(".crystalButton").on("click", function () {
 
-        //Add value of each clicked crystal to yourScore
+        // Add value of each clicked crystal to yourScore
         yourScore = yourScore + (Number($(this).attr("value")));
         $("#currentScore").text(yourScore);
+
+        checkScore();
 
     });
 });
 
-// //First run of game when user loads page
+// Win/loss conditions
+function checkScore() {
+    if (yourScore === randomValue) {
+        yourWins++;
+        $("#wins").text(yourWins);
+        setUpGame();
+    }
+
+    else if (yourScore > randomValue) {
+        yourLosses++;
+        $("#losses").text(yourLosses);
+        setUpGame();
+    }
+}
+
+// Function that sets up/resets the game
 function setUpGame() {
 
     // Generate random value between 19 and 120
@@ -51,15 +68,9 @@ function setUpGame() {
     $("#crystal4").attr("value", crystalValues[3]);
     console.log("Crystal 4 value - test", crystalValues[3]);
 
+    //Reset score to 0
+    yourScore = 0;
+    $("#currentScore").text(yourScore);
 }
-
-    //Player WINS if yourScore = target-value, wins go up by 1
-
-    // Player LOSES if yourScore > target-value, losses go up 1
-
-    // Game restarts upon win/loss:
-         //Total-score resets to 0
-         //New random target-value generated, displayed
-         //All 4 crystals randomly assigned 4 new hidden values
 
 

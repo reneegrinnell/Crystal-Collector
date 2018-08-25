@@ -8,59 +8,73 @@
   <!-- Bootstrap-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <!--Font Awesome-->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" 
+  integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" 
+  crossorigin="anonymous">
   <!--Custom CSS-->
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 
 <body>
-    <!-- <img src="assets/images/background-krystal-ng-unsplash.jpg" height=200, width=200> -->
 
-    <h1><i class="far fa-gem"></i> Crystal Collector <i class="far fa-gem"></i></h1>
-    <h2>A Blingy Math Game</h2>
-
-    <div>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">
+                <i class="far fa-gem"></i>
+                    Crystal Collector 
+                    <i class="far fa-gem"></i>
+            </h1>
+            <p class="lead">A Blingy Math Game</p>
+        </div>
+    </div>
+   
+    <div class="container">
         <p>
-            <b>Instructions:</b>
-            <br>
-            A random number ("Target Value") will appear at the start of the game.
+            <h5>How to Play:</h5>
+            At the start of the game, a random number ("Target Value") will appear and
+            each of the four crystal buttons below will be assigned different random
+            values. The value of each crystal is hidden from you until you click it.
         </p>
         <p>
-            Click on the four crystals below to add a specific point value to your 
-            score. Each crystal's value is hidden from you until you click it.
-        </p>
-        <p>
-            Win the game by matching your total score to the randomly selected target 
+            Win a round by matching your total score to the randomly selected target 
             value. If the total score exceeds the target value, you lose! 
             <i class="far fa-sad-cry"></i>
         </p>
-        <p>
-            The value of each crystal changes each time a new game starts.
-        </p>
-    </div>
 
-    <div>
-        <p>Target Value: <span id="targetValue">0</span></p>
-    </div>
+        <div class="row">
+            <div class="col-md-6">
+                <h6>Target Value:</h6><span id="targetValue">0</span>
+                <h6>Your Score:</h6><span id="currentScore">0</span>
+            </div>
 
-    <div>
-        <p>Wins: <span id="wins">0</span></p>
-        <p>Losses: <span id="losses">0</span></p>
-    </div>
+            <div class="col-md=6">
+                <h6>Wins:</h6><span id="wins">0</span>
+                <h6>Losses:</h6><span id="losses">0</span>
+            </div>
+        </div>
+    
+        <div class="row">
+            <div class="col-md-2 col-sm-3 col-xs-3">
+                <button class="btn btn-light btn-lg crystalButton" id="crystal1">
+                    <i class="far fa-gem"></i></button>
+            </div>
 
-    <div>
-        <button class="btn btn-light btn-lg crystalButton" id="crystal1">
-            <i class="far fa-gem"></i></button>
-        <button class="btn btn-light btn-lg crystalButton" id="crystal2">
-            <i class="far fa-gem"></i></button>
-        <button class="btn btn-light btn-lg crystalButton" id="crystal3">
-            <i class="far fa-gem"></i></button>
-        <button class="btn btn-light btn-lg crystalButton" id="crystal4">
-            <i class="far fa-gem"></i></button>
-    </div>
+            <div class="col-md-2 col-sm-3 col-xs-3">
+                <button class="btn btn-light btn-lg crystalButton" id="crystal2">
+                    <i class="far fa-gem"></i></button>
+            </div>
 
-    <div>
-        <p>Your Score: <span id="currentScore">0</span></p>
+            <div class="col-md-2 col-sm-3 col-xs-3">
+                <button class="btn btn-light btn-lg crystalButton" id="crystal3">
+                    <i class="far fa-gem"></i></button>
+            </div>
+
+            <div class="col-md-2 col-sm-3 col-xs-3">      
+                <button class="btn btn-light btn-lg crystalButton" id="crystal4">
+                    <i class="far fa-gem"></i></button>
+            </div>
+        </div>
+
     </div>
 
     <!-- Link to jQuery Library, game JS file -->

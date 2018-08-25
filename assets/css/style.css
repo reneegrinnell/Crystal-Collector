@@ -1,25 +1,29 @@
+.jumbotron {
+    opacity: .6;
+}
+
 body {
-    background: url("..images/background-krystal-ng-unsplash.jpg");
-    height: 100%;
-    background-color: paleturquoise;
+    background: url("../images/background-krystal-ng-unsplash.jpg");
+    background-size: cover;
+    background-color: palegoldenrod;
  }
 
-.crystal-1 {
+#crystal1 {
     background-color: turquoise;
     border-width: 0;
 }
 
-.crystal-2 {
+#crystal2 {
     background-color: pink;
     border-width: 0;
 }
 
-.crystal-3 {
+#crystal3 {
     background-color: paleturquoise;
     border-width: 0;
 }
 
-.crystal-4 {
+#crystal4 {
     background-color: plum;
     border-width: 0;
 }

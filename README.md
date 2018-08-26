@@ -7,9 +7,9 @@ each of the four crystal buttons below will be assigned different random
 values. The value of each crystal is hidden from you until you click it.
             
 Win a round by matching your total score to the randomly selected target 
-value. If the total score exceeds the target value, you lose! 
+value. If the total score exceeds the target value, you lose.
 
 ## Technologies Used
-*HTML
-*CSS/Bootstrap
-*JavaScript/jQuery
+* HTML
+* CSS/Bootstrap
+* JavaScript/jQuery

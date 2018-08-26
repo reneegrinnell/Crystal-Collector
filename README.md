@@ -13,3 +13,6 @@ value. If the total score exceeds the target value, you lose.
 * HTML
 * CSS/Bootstrap
 * JavaScript/jQuery
+
+## Image Credit
+Background photo &copy; Krystal Ng at https://unsplash.com/photos/PrQqQVPzmlw
